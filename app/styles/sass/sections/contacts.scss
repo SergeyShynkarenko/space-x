@@ -1,0 +1,70 @@
+.contacts {
+    background-color: $background;
+    padding-bottom: 100px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 1050px) {
+            display: block;
+        }
+    }
+    &__box {
+        width: 500px;
+        @media(max-width: 1050px) {
+            width: 100%;
+        }
+        &-text {
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: 80px;
+        }
+    }
+    &__title {
+        padding-bottom: 46px;
+    }
+    &__form-input {
+        background-color: $background;
+        border: none;
+        border-bottom: 1px solid $textcolor;
+        margin-bottom: 30px;
+        color: $textcolor;
+        font-size: 14px;
+        line-height: 1.21;
+        padding: 20px 0;
+        width: 100%;
+        &::placeholder {
+            color: $textcolor;
+            font-size: 14px;
+            line-height: 1.21;
+        }
+    }
+    &__btn {
+        width: 100%;
+        margin-top: 70px;
+    }
+    &__guarantees {
+        width: 500px;
+        @media(max-width: 1050px) {
+            margin: 0 auto;
+        }
+        @media(max-width: 620px) {
+            width: 100%;
+        }
+        &-text {
+            font-size: 24px;
+            line-height: 1.2;
+            @media(max-width: 480px) {
+                font-size: 20px;
+            }
+        }
+        &-img {
+            display: flex;
+            justify-content: flex-end;
+            margin-left: auto;
+            @media(max-width: 620px) {
+                max-width: 100%;
+            }
+        }
+    }
+
+}

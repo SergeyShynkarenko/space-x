@@ -1,0 +1,101 @@
+.how-to {
+    background-image: url('../images/dist/howTo-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-bottom: 50px;
+
+    &__box {
+        text-align: center;
+
+        svg {
+          @media(max-width: 895px) {
+            display: none;
+          }  
+        }
+
+        &-list {
+            display: none;
+            @media(max-width: 895px) {
+                display: block;
+                list-style: none;
+                padding-left: 0;
+                text-align: left;
+            }
+        }
+
+        &-item {
+           @media(max-width: 895px) {
+                padding-bottom: 30px;
+                text-align-last: left;
+                padding-left: 20px;
+                margin-left: 20px;
+                position: relative;
+                border-left: 1px solid $textcolor;
+                line-height: 1.45;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -10px;
+                    top: 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: $textcolor;
+                }
+
+                &:last-child {
+                    border-left: none;
+                }
+            }
+      
+        }
+
+        & circle,
+        & text,
+        & foreignObject {
+            transition: all .5s;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1.16;
+        }
+
+        & g:hover circle {
+            r: 20px;
+            fill: $blue;
+        }
+
+        & g:hover text {
+            font-size: 20px;
+            line-height: 1.19;
+            fill: $blue;
+        }
+
+        & g:hover foreignObject {
+            font-size: 20px;
+            line-height: 1.19;
+            color: $blue;
+            width: 300px;
+            height: 150px;
+        }
+        
+        & g:hover .down {
+            width: 160px;
+        }
+
+        & g:hover .left {
+            width: 140px;
+        }
+
+
+    }
+
+    foreignObject {
+        text-align: left;
+
+        p {
+            margin: 0;
+        }
+    }
+
+}

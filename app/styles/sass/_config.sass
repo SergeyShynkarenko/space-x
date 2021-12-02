@@ -1,5 +1,4 @@
 // USER VARIABLES SECTION
-
 $accent: #cb0e0e // Accent Color
 $fontsize: 16px // Body Font Size
 $textcolor: #fff // Text Color
@@ -63,6 +62,8 @@ body
 	position: relative
 	overflow-x: hidden
 	color: $textcolor
+	&.hidden__body
+		overflow-y: hidden
 
 .container
 	max-width: 1230px
@@ -81,7 +82,7 @@ a
 	font-size: 18px
 	padding: 20px
 	text-align: center
-	border: 2px solid $textcolor
+	border: 1px solid $textcolor
 	text-transform: uppercase
 	background-color: transparent
 	display: inline-block
@@ -90,6 +91,18 @@ a
 	&:hover
 		background-color: $textcolor
 		color: $accent
-		border: 2px solid $accent
 
-
+.title 
+    padding: 100px 0
+    font-size: 48px
+    line-height: 1
+    font-weight: 400
+    font-family: 'spaceagecyrillic'
+    @media(max-width: 640px) 
+        padding: 50px 0
+        font-size: 38px
+    
+    @media(max-width: 480px) 
+        font-size: 28px
+    
+ 

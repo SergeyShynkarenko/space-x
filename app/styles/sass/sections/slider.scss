@@ -1,0 +1,43 @@
+.slider {
+    text-align: center;
+    &__inner {       
+        margin-bottom: 50px;
+        border: 1px solid $textcolor;
+        padding: 100px 0;
+        @media(max-width: 720px) {
+            padding: 0;
+        } 
+    }
+
+    &__description {
+        font-size: 24px;
+        line-height: 1.25;
+        font-family: spaceagecyrillic;
+        @media(max-width: 720px) {
+            font-size: 18px;
+        }
+    }
+    &__box-img {
+        margin: 0 auto;
+
+    }
+    &__arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        &-left {
+            left: 75px;
+        }
+        &-right {
+            right   : 75px;
+        }
+    }
+    .slick-slider {
+        img {
+            @media(max-width: 895px) {
+                max-width: 100%;
+            } 
+        }
+    }
+}

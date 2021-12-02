@@ -1,0 +1,107 @@
+.footer {
+    background-image: url('../images/dist/footer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 100px 0 150px;
+    @media(max-width: 570px) {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: flex-end;
+        @media(max-width: 570px) {
+            display: block;
+        }
+       
+    }
+
+    &__text {
+        width: 165px;
+        margin-right: 50px;
+        line-height: 1.12;
+        @media(max-width: 570px) {
+            width: 100%;
+            margin-right: 0;
+        }
+        p + p {
+            margin-top: 50px;
+            @media(max-width: 570px) {
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        width: 120px;
+        margin-right: 95px;
+        padding: 0;
+         @media(max-width: 570px) {
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+    
+    &__links {
+        list-style: none;
+        width: 165px;
+        padding: 0;
+        @media(max-width: 570px) {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+
+    &__menu-item,
+    &__links-item {
+        margin-bottom: 20px;
+        line-height: 1.19;
+    }
+
+    &__menu-link,
+    &__links-link {
+        text-transform: uppercase;
+        transition: color .5s;
+        &:hover {
+            color: $accent;
+        }
+
+    }
+
+    #scrollToTopBtn {
+        background: $textcolor;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        bottom: 27px;
+        right: 25px;
+        position: fixed;
+        visibility: visible;
+        transition: all .3s ease;
+        z-index: 98;
+
+        &.btn-top {
+            opacity: 1;
+
+            &__hide {
+                opacity: 0;
+            }
+        }
+
+        i {
+            font-size: 20px;
+            transition: all .5s ease;
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}

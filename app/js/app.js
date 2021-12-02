@@ -9,11 +9,23 @@ import $ from 'jquery'
 require('../js/vendor/slick-slider/slick.min.js')
 	document.addEventListener('DOMContentLoaded', () => {
 
+//preloader
+window.onload = function () {
+	const preloader = document.getElementById('preloader');
+	preloader.classList.add('hide-preloader');
+  setInterval(function() {
+      preloader.classList.add('preloader-hidden');
+	}, 990);
+};
+
+//burger
 	document.querySelector('.hamburger').addEventListener('click', function () {
 		document.querySelector('.hamburger--slider').classList.toggle('is-active');
 		document.querySelector('.menu__list').classList.toggle('menu__list--active');
+		document.querySelector('body').classList.toggle('hidden__body');
 	});
 
+//scroll to top
 	const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 	window.onscroll = () => {
@@ -28,6 +40,7 @@ require('../js/vendor/slick-slider/slick.min.js')
 		window.scrollTo(0, 0);
 	};
 
+//slider
   $(function() {
     $('.slider__box').slick({
     	prevArrow: '<img class="slider__arrow slider__arrow-left" src="images/dist/arrow-left.svg" alt="Arrow-left">',

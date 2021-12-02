@@ -1,0 +1,42 @@
+.to-book {
+    background-image: url('../images/dist/toBook-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    @media(max-width: 630px) {
+       background-position: top left; 
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 1024px) {
+            display: block;
+        }
+
+    }
+    &__title {
+        @media(max-width: 480px) {
+            font-size: 23px;
+        }
+    }
+
+    &__text {
+        width: 165px;
+        font-size: 14px;
+        line-height: 1.2;
+        margin-top: 100px;
+        margin-right: 52px;
+        margin-left: auto;
+        @media(max-width: 1024px) {
+            width: 100%;
+            margin: 0 0 30px 0;
+        }
+
+        &+.to-book__text {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+}

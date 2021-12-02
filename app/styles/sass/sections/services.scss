@@ -1,0 +1,101 @@
+.services {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 200px;
+        @media(max-width: 895px) {
+            display: block;
+        }
+        @media(max-width: 720px) {
+            padding-bottom: 50px;
+        } 
+    }
+
+    &__title {
+        @media(max-width: 620px) {
+            font-size: 35px;
+        }
+        @media(max-width: 480px) {
+            font-size: 23px;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+
+        &:first-child {
+            margin-bottom: 49px;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 1.16;
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        margin: 25px 0;
+        list-style: none;
+        padding: 0;
+        @media(max-width: 895px) {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &-item {
+            padding-left: 36px;
+            font-size: 24px;
+            line-height: 1.19;
+            position: relative;
+            @media(max-width: 480px) {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 4px;
+                width: 20px;
+                height: 20px;
+                background-color: $textcolor;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__price {
+        font-size: 12px;
+        line-height: 1.16;
+        @media(max-width: 895px) {
+            margin-bottom: 170px;
+        }
+    }
+
+    &__buttons {
+        width: 500px;
+        @media(max-width: 895px) {
+            max-width: 500px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+    }
+
+    .btn-buy {
+        position: relative;
+
+        &::before {
+            content: url('../images/dist/astronaut.png');
+            width: 192px;
+            position: absolute;
+            right: 0;
+            bottom: 36px;
+            @media(max-width: 341px) {
+                bottom: 57px;
+            }
+        }
+    }
+}
