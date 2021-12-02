@@ -4,7 +4,7 @@ $accent: orange // Accent Color
 $fontsize: 16px // Body Font Size
 $textcolor: #333 // Text Color
 $lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
+$userfont: sf-pro-display, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -15,7 +15,7 @@ $gutter: $grid-gutter-width
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-@import '../js/vendor/slick-slider/slick'
+@import '../../js/vendor/slick-slider/slick'
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
@@ -28,10 +28,9 @@ $gutter: $grid-gutter-width
 		font-weight: $fweight
 		src: url($furl) format('woff2')
 
-@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('sf-pro-display', normal, 700, '../../fonts/SF-Pro-Display-Bold.woff2')
+@include font('sf-pro-display', normal, 400, '../../fonts/SF-Pro-Display-Regular.woff2')
+@include font('spaceagecyrillic', normal, 400, '../../fonts/spaceagecyrillic_regular.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -77,7 +76,13 @@ a
 	font-size: 48px
 	line-height: 1
 	font-weight: 400
-
+	font-family: 'spaceagecyrillic'
+	// @media(max-width: 630px)
+ //    padding: 50px 0
+ //    font-size: 38px
+ //  @media(max-width: 480px)
+ //   	font-size: 28px
+	    
 .button
 	font-size: 18px
 	line-height: 1.16
