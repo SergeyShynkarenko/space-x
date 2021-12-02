@@ -14,10 +14,32 @@ require('../js/vendor/slick-slider/slick.min.js')
 		document.querySelector('.menu__list').classList.toggle('menu__list--active');
 	});
 
+	const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+	window.onscroll = () => {
+		if (window.scrollY > 700) {
+			scrollToTopBtn.classList.remove('btn-top__hide');
+		} else if (window.scrollY < 700){
+			scrollToTopBtn.classList.add('btn-top__hide');
+		}
+	};
+
+	scrollToTopBtn.onclick = () => {
+		window.scrollTo(0, 0);
+	};
+
   $(function() {
     $('.slider__box').slick({
     	prevArrow: '<img class="slider__arrow slider__arrow-left" src="images/dist/arrow-left.svg" alt="Arrow-left">',
     	nextArrow: '<img class="slider__arrow slider__arrow-right" src="images/dist/arrow-right.svg" alt="Arrow-right">',
+    	responsive: [
+    		{
+		      breakpoint: 481,
+		      settings: {
+		        arrows: false
+		      }
+    		},
+  		]
     });
 	});
 
