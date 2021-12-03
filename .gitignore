@@ -5,6 +5,4 @@
 /**/*.DS_Store
 /**/package-lock.json
 /**/debug.log
-/**/*.bowerrc
-/**/readme.md
 /yarn.lock
