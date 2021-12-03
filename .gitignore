@@ -1,9 +1,11 @@
 /node_modules/
 /.git/
+/.vscode/
 /**/Thumbs.db
 /**/*.DS_Store
 /**/package-lock.json
 /**/debug.log
+/**/.bowerrc
+/**/readme.md
 /yarn.lock
-/.bowerrc
 /.vscode/
