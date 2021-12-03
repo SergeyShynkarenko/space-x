@@ -4,3 +4,6 @@
 /**/*.DS_Store
 /**/package-lock.json
 /**/debug.log
+/yarn.lock
+/.bowerrc
+/.vscode/
