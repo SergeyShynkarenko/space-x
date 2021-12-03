@@ -1,6 +1,7 @@
 /node_modules/
 /.git/
 /.vscode/
+/dist/
 /**/Thumbs.db
 /**/*.DS_Store
 /**/package-lock.json
